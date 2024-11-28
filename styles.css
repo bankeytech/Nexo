@@ -432,6 +432,8 @@ hr{
     display: block !important;
     cursor: pointer;
     font-size: 34px !important;
+    position: absolute;
+    right: 20px;
 }
   .cov{
     padding: 0px 100px;
