@@ -11,6 +11,10 @@ body{
   background: #fff !important;
 }
 
+p{
+  font-family: "Poppins", sans-serif;
+}
+
 header{
   position: sticky;
   top: 0;
@@ -84,7 +88,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
+  text-align: start;
   padding: 0px 170px;
 }
 .title{
@@ -92,11 +96,12 @@ header{
 }
 
 .title h2{
+  font-family: "Jost", sans-serif;
   font-size: 89px;
-  text-shadow: 5px 5px 4px #402e32;
 }
 
 .title h4{
+  font-family: "Josefin Sans", sans-serif;
   font-size: 30px;
   font-weight: bold;
 }
@@ -123,10 +128,10 @@ header{
   padding: 150px 100px;
 }
 
-.sec h2{
+.sec h2, .tit7{
+  font-family: "Jost", sans-serif;
    font-size: 3em;
    color: #402e32;
-   text-shadow: 3px 3px 4px #402e32;
    margin-bottom: 20px;
    text-align: center;
 }
@@ -170,18 +175,151 @@ header{
 
 .colg h2,
 .roll h2{
+  font-family: "Jost", sans-serif;
   color: #402e32;
   font-size: 3em;
-  padding-bottom: 18px;
+  padding-bottom: 13px;
+}
+
+.colg p{
+  padding: 5px 0px ;
+}
+
+.roll p{
+  padding: 14px 0px;
 }
 
 .colg p,
 .roll p{
   color: #402e32;
   font-size: 1.3em;
-  padding: 14px 0px;
   width: 82%;
 }
+
+
+
+:root{
+  --primary-clr: #ffbd4a;
+}
+
+.logox{
+  max-width: 100%;
+}
+
+#timeline{
+  font-size:14px;
+  width: 90%;
+  margin: 30px auto;
+  line-height: 1.5em;
+  position: relative; 
+  transition: all 0.3s;
+}
+
+#timeline,
+#timeline *,
+#timeline *::before,
+ #timeline *::after {
+  box-sizing: border-box;
+}
+
+#timeline::before{
+   content: " ";
+   width: 3px;
+   height: 100%;
+   position: absolute;
+   left: 50%;
+   top: 0;
+   background-color: var(--primary-clr);
+} 
+
+ #timeline, .timeline-item{
+  margin-bottom: 30px;
+  position: relative;
+}
+
+#timeline .timeline-item .timeline-icon{
+  width: 50px; 
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: flex;
+  align-items: center; 
+  justify-content:center ;
+  margin-left: -23px;
+  border-radius: 50%;
+  background-color: var(--primary-clr);
+} 
+
+#timeline .timeline-item .timeline-icon img{ 
+  width: 50%;
+}
+
+#timeline .timeline-item .timeline-content{
+  width: 45%;
+  padding: 20px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: all 0.3s;
+}
+ 
+#timeline .timeline-item .timeline-content h2{ 
+  padding: 15px;
+  color: #402e32;
+  margin: -20px -20px 0 -20px;
+  font-weight: 500;
+  border-radius: 3px 3px 0 0;
+  background-color: var(--primary-clr);
+}
+
+#timeline .timeline-item .timeline-content p{ 
+  font-size: 20px;
+  padding: 15px 6px;
+  color: #402e32;
+  line-height: 26px;
+}
+
+#timeline .timeline-item .timeline-content span{ 
+  border-radius: 50%;
+  background-color: #402e32;
+  color: #ffbd4a;
+  padding: 6px 12px;
+}
+
+
+#timeline .timeline-item .timeline-content::before{
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: -5px;
+  width: 14px;
+  height: 14px;
+  display: block;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  background-color: var(--primary-clr);
+}
+
+#timeline .timeline-item .timeline-content.right{
+  float: right;
+} 
+
+#timeline .timeline-item .timeline-content.right::before{
+  left: -5px;
+  right: inherit;
+} 
+
+#timeline .timeline-item:after,
+#timeline .timeline-item::before{
+  content: "";
+  display: block;
+  width: 100%;
+  clear: both;
+}  
+
+
 
    /* Third section */
 
@@ -275,6 +413,7 @@ header{
 }
 
 .co2 h4{
+  font-family: "Jost", sans-serif !important;
   margin-bottom: 25px;
   font-size: 19px;
 }
@@ -392,6 +531,7 @@ hr{
   
   .logo{
     width: 58px;
+    margin-left: -55px;
  }
   .nav-links {
     position: fixed;
@@ -433,7 +573,7 @@ hr{
     cursor: pointer;
     font-size: 34px !important;
     position: absolute;
-    right: 20px;
+    right: 55px;
 }
   .cov{
     padding: 0px 100px;
@@ -532,6 +672,7 @@ hr{
   .cov{
     flex-direction: column;
     padding: 60px 0px;
+    text-align: center;
   }
   .title h2{
     font-size: 75px;
@@ -559,6 +700,32 @@ hr{
     font-size: 1.3em;
     padding: 0px 30px;
   }
+
+
+  #timeline{
+    margin: 30px;
+    padding: 0;
+  }
+  #timeline::before{
+    left: 0;  
+  }
+  #timeline .timeline-item .timeline-icon{
+    left: 0;  
+  }
+  #timeline .timeline-item .timeline-content{
+     width: 90%;
+     float: right;
+  }
+  #timeline .timeline-item .timeline-content::before{
+    left: -5px;
+    right: inherit;
+ }
+ #timeline .timeline-item .timeline-content p{ 
+  font-size: 1.2em;
+}
+
+
+
    /* Third Section */
 
    .btn{
@@ -624,6 +791,15 @@ hr{
     font-size: 1em;
     padding: 0px 6px;
   }
+  /* Second Section */
+  .colg h2{
+    font-size: 2.1em;
+  }
+
+  .colg p{
+    font-size: 1em;
+  }
+
 
    /* Third Section */
    .btn-cov{
@@ -649,6 +825,17 @@ hr{
     font-size: 13px;
     font-weight: bold;
   }
+
+    /* FOOTER */
+    .co1 p{
+      font-size: 16px;
+    }
+    .co2 h4{
+      font-size: 16px;
+    }
+    .co2 p{
+      font-size: 16px;
+     }
 
 
 
